@@ -1,2 +1,2 @@
 # kometa-config-images
-Custom images for Kometa Plex collections
+Custom images for Kometa Plex
