@@ -32,8 +32,8 @@ This repo includes support for:
 - [📺 **TV Show Lists**](#-tv-show-lists) – Sitcoms, top episodes, nostalgia shows, video game adaptations  
 - [🔁 **Chronological TV Orders**](#-chronological-tv-orders) – Ordered episodes (e.g., Star Wars: The Clone Wars)  
 - [👤 **Person-Based Lists**](#-person-based-lists) – Lists from creators like BeHaind, BelYves  
-- [🖼️ **Overlays for Movies**](#overlays-for-movies) – Resolutions, formats  
-- [🖼️ **Overlays for TV Shows**](#overlays-for-tv-shows) – Streaming network overlays  
+- [🖼️ **Overlays for Movies**](#-overlays-for-movies) – Resolutions, formats  
+- [🖼️ **Overlays for TV Shows**](#-overlays-for-tv-shows) – Streaming network overlays  
 
 ---
 
