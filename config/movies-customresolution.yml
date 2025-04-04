@@ -1,0 +1,51 @@
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: "120"
+
+collections:
+  4K:
+    plex_search:
+      all:
+        resolution: 4K
+    build_collection: false
+    item_label: 4K 
+    collection_order: alpha
+
+  4K Dolby Vision:
+    plex_search:
+      any:
+        resolution: 4k
+      sort_by: title.asc
+    filters: 
+      has_dolby_vision: true
+    sort_title: "!120_+4K Dolby Vision"  
+    minimum_items: 1
+    url_poster: https://theposterdb.com/api/assets/226933      
+    collection_order: alpha
+
+  Remux Movies:
+    plex_all: true
+    filters:
+      filepath.regex: '(?i)\bremux\b'  
+    sort_title: "!120_+Remux Movies"  
+    minimum_items: 1    
+    collection_order: alpha
+    item_label: 4KRemux    
+
+  IMAX Movies:
+    plex_all: true
+    filters:
+      filepath.regex: '(?i)\bimax\b'  
+    sort_title: "!120_+IMAX Movies"  
+    minimum_items: 1    
+    collection_order: alpha    
+    item_label: IMAX
+    
+  Extended Versions:
+    plex_all: true
+    filters:
+      filepath.regex: '(?i)\bextended\b'  
+    sort_title: "!120_+Extended Versions"
+    minimum_items: 1    
+    collection_order: alpha        

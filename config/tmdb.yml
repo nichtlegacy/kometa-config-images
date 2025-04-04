@@ -1,0 +1,42 @@
+##############################################################################
+#                          TMDb Charts Collections                           #
+#                 Created by Yozora, Bullmoose20, & Sohjiro                  #
+#          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
+#             https://kometa.wiki/en/latest/defaults/chart/tmdb              #
+##############################################################################
+
+external_templates:
+  default: templates
+  template_variables:
+    collection_section: "020"
+    image: chart/<<mapping_name_encoded>>
+
+templates:
+  tmdb:
+    default:
+      limit: 100
+      limit_<<key>>: <<limit>>
+      chart: <<key>>
+    tmdb_<<chart>>: <<limit_<<key>>>>
+
+collections:
+  TMDb Popular:
+    variables:
+      key: popular
+    template:
+      - name: tmdb
+      - name: shared
+        translation_key: tmdb_popular
+      - name: arr
+      - name: custom
+
+  TMDb Top Rated:
+    variables:
+      key: top
+    template:
+      - name: tmdb
+        chart: top_rated
+      - name: shared
+        translation_key: tmdb_top
+      - name: arr
+      - name: custom

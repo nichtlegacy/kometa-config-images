@@ -1,0 +1,23 @@
+#####################################
+#     Person Collections            #
+#####################################
+templates:
+  Person:
+    sort_title: "!199_<<collection_name>>"
+    sync_mode: sync
+
+collections:
+
+  BeHaind Top 70:
+    template: { name: Person }
+    imdb_list:
+      - https://www.imdb.com/list/ls591852436
+    summary: "BeHaind/David Hain Top 70 Filme"
+    collection_order: custom   
+
+  BelYves Top 20:
+    template: { name: Person }
+    imdb_list:
+      - https://www.imdb.com/list/ls591858091
+    summary: "BelYves Top 20 Filme"
+    collection_order: custom       

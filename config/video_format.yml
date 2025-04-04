@@ -1,0 +1,69 @@
+##############################################################################
+#                            Video Format Overlay                            #
+#                 Created by Yozora, Bullmoose20, & Sohjiro                  #
+#                     Credit to Magic815 for base images                     #
+#          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
+#        https://kometa.wiki/en/latest/defaults/overlays/video_format        #
+##############################################################################
+
+external_templates:
+  default: templates
+  template_variables:
+    default:
+      text_<<key>>: <<overlay_name>>
+      horizontal_align: right
+      vertical_align: top
+    conditionals:
+      vertical_offset:
+        default: 15
+        conditions:
+          - vertical_align: center
+            value: 0
+          - vertical_align: top
+            value: 15
+          - vertical_align: bottom
+            value: 30
+      horizontal_offset:
+        default: 15
+        conditions:
+          - horizontal_align: center
+            value: 0
+          - horizontal_align: [left, right]
+            value: 15
+    group: quality
+    back_color: "#00000099"
+    back_width: 305
+    back_height: 105
+    final_name: text(<<text_<<key>>>>)
+
+templates:
+  video_format:
+    default:
+      regex_<<key>>: <<regex>>
+    conditionals:
+      regex:
+        conditions:
+          - key: remux
+            value: '(?i)\bremux\b'
+          - key: cam
+            value: '(?i)\b(HQ|HD)?CAM\b'
+          - key: telesync
+            value: '(?i)\b(TS|HDTS|TELESYNC)\b'       
+    ignore_blank_results: true
+    plex_all: true
+    filters:
+      filepath.regex: <<regex_<<key>>>>
+
+overlays:
+
+  REMUX:
+    variables: {key: remux, weight: 60}
+    template: [name: standard, name: video_format]
+
+  TELESYNC:
+    variables: {key: telesync, weight: 9}
+    template: [name: standard, name: video_format]
+
+  CAM:
+    variables: {key: cam, weight: 8}
+    template: [name: standard, name: video_format]

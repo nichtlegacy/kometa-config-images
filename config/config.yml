@@ -1,0 +1,350 @@
+# ██╗     ███████╗ ██████╗  █████╗  ██████╗██╗   ██╗
+# ██║     ██╔════╝██╔════╝ ██╔══██╗██╔════╝╚██╗ ██╔╝
+# ██║     █████╗  ██║  ███╗███████║██║      ╚████╔╝ 
+# ██║     ██╔══╝  ██║   ██║██╔══██║██║       ╚██╔╝  
+# ███████╗███████╗╚██████╔╝██║  ██║╚██████╗   ██║   
+# ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═╝
+
+libraries:
+  Filme:
+    collection_files:
+    # List of actors
+    - file: config/actors.yml
+
+    # List of directors
+    - file: config/directors.yml    
+
+    # Custom Resolution/Edition Collections
+    - file: config/movies-customresolution.yml
+
+    # Best movies grouped by decade
+    - file: config/movies-decades.yml
+
+    # Holiday-themed movie collections
+    - file: config/movies-holidays.yml
+
+    # Custom movie lists (Themes, Genres, etc.)
+    - file: config/movies-list.yml
+
+    # Movies grouped by studios
+    - file: config/movies-studios.yml
+
+    # IMDb-based movie collections
+    - file: config/imdb.yml
+      template_variables:
+        collection_order: custom
+
+    # IMDb Top 250 movies with specific Radarr settings
+    - file: config/imdbtop250.yml
+      template_variables:
+        collection_order: custom
+        radarr_add_missing: true
+        radarr_quality:
+        radarr_search: true
+
+    # Oscar-winning movies with custom settings
+    - file: config/oscars.yml
+      template_variables:
+        collection_mode: show_items
+        collection_order: alpha
+        name_format: Oscars <<key_name>> Winners
+        data:
+          starting: latest-3
+          ending: latest
+
+    # List of notable persons and their movies (Mostly YouTubers)
+    - file: config/persons.yml
+
+    # Resolution-based movie collections (4K, 1080P, Other Resolutions)
+    - file: config/resolution.yml
+      template_variables:
+        collection_order: alpha
+
+    # TMDb-based movie collections (TMDb Popular, TMDb Top Rated)
+    - file: config/tmdb.yml
+
+    # Movie universes (e.g., MCU, DCU etc.) with around 50 universes
+    - file: config/universe.yml
+
+    overlay_files:
+    # Gradient Overlay Top to Bottom
+    - file: config/overlays/jmxd/gradient.yml
+
+    # Display Remux, CAM, and Telesync top right
+    - file: config/video_format.yml
+      template_variables:
+        horizontal_offset: 50
+        horizontal_align: right
+        vertical_offset: 0
+        vertical_align: top
+        back_radius: 0
+        back_color: '#00000000'
+        back_height: 153
+        font_size: 70
+        font_color: '#FFFFFF'
+        font: config/overlays/fonts/AvenirNextLTPro-Bold.ttf
+
+    # Language Overlay (German, English, Japanese)
+    #- file: config/overlay_languages_movies.yml
+    
+    # Resolution & Dynamic Range
+    - default: resolution
+      template_variables:
+        file: config/overlays/jmxd/resolution/<<key>><<alt>>.png
+        use_resolution: true
+        use_edition: false
+        horizontal_offset: 50
+        horizontal_align: left
+        vertical_offset: 50
+        vertical_align: top
+        back_radius: 0
+        back_align: left
+        back_color: '#00000000'
+        back_height: 50
+
+    # Display movie edition bottom center
+    #- default: resolution   
+    #  template_variables:
+    #    file: config/overlays/jmxd/edition/<<key>>.png
+    #    use_resolution: false
+    #    use_edition: true
+    #    horizontal_offset: 0
+    #    horizontal_align: center
+    #    vertical_offset: 0
+    #    vertical_align: bottom
+    #    back_radius: 0
+    #    back_color: '#00000000'
+    #    back_height: 153
+
+    # CAM Overlay
+    - file: config/overlay_cam.yml
+
+    - remove_overlays: false
+    - reapply_overlays: false
+
+    operations:
+      mass_critic_rating_update:
+        - mdb_tomatoes
+        - 5.0
+      mass_audience_rating_update:
+        - mdb_tomatoesaudience
+        - 5.0
+      mass_user_rating_update:
+        - mdb_trakt
+        - 5.0 
+      assets_for_all: true
+
+Serien:
+  collection_files:
+    # IMDb-based series collections
+    - default: imdb
+
+    # Resolution-based series collections
+    - default: resolution
+
+    # Streaming platform series (originals only)
+    - default: streaming
+      template_variables:
+        originals_only: true
+
+    # TMDb-based series collections
+    - default: tmdb
+
+    # Series universes (e.g., Arrowverse, MCU shows)
+    - file: config/universe.yml
+
+    # Custom series lists
+    - file: config/show-list.yml
+
+  overlay_files:
+    # Network overlay top center
+    - pmm: network
+      template_variables:
+        horizontal_align: center
+        vertical_offset: 50
+        vertical_align: top
+        back_width: 621
+        url: https://raw.githubusercontent.com/nichtlegacy/kometa-config-images/refs/heads/main/plex-meta-manager/overlays/images/network/shadow/<<key>>.png
+        back_color: 00
+
+    - remove_overlays: false
+    - reapply_overlays: false
+
+  operations:
+    mass_critic_rating_update:
+      # Update critic ratings from IMDb with a minimum of 5.0
+      - imdb
+      - 5.0
+    mass_audience_rating_update:
+      # Update audience ratings from Rotten Tomatoes with a minimum of 5.0
+      - mdb_tomatoesaudience
+      - 5.0
+    mass_user_rating_update:
+      # Update user ratings from TMDb with a minimum of 5.0
+      - tmdb
+      - 5.0 
+    #mass_episode_audience_rating_update: 
+    #  - tmdb
+    #  - 2.0
+    #mass_episode_critic_rating_update: 
+    #  - imdb
+    #  - 2.0
+
+playlist_files:
+- file: config/playlists.yml
+  template_variables:
+    libraries: Filme, Serien, Dokumentationen
+
+settings:
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality: 90
+  cache: true
+  cache_expiration: 60
+  asset_directory: Plex_Poster
+  asset_folders: true
+  asset_depth: 2
+  create_asset_folders: false
+  prioritize_assets: true
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: true
+  show_missing: false
+  show_missing_assets: true
+  save_report: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_user: all
+  playlist_exclude_users:
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  check_nightly: false
+
+webhooks:
+  error:
+  version:
+  run_start:
+  run_end:
+  changes:
+  delete:
+
+plex:
+  url: 
+  token:
+  timeout: 60
+  db_cache:
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  verify_ssl:
+
+tmdb:
+  apikey:
+  language: de
+  cache_expiration: 60
+  region:
+
+tautulli: # Can be individually specified per library as well
+  url: 
+  apikey: 
+
+github:
+  token: 
+
+omdb:
+  apikey: ########
+  cache_expiration: 60
+
+mdblist:
+  apikey: 
+  cache_expiration: 60
+
+notifiarr:
+  apikey: 
+
+anidb: # Not required for AniDB builders unless you want mature content
+  username: ######
+  password: ######
+  language: en
+  client:
+
+radarr:
+  url: 
+  token: 
+  add_missing: false
+  add_existing: false
+  root_folder_path:
+  monitor: true
+  availability: announced
+  quality_profile:
+  tag:
+  search: false
+  radarr_path:
+  plex_path:
+  upgrade_existing: false
+  ignore_cache: false
+  monitor_existing: false
+
+sonarr:
+  url: 
+  token: 
+  add_missing: false
+  add_existing: false
+  root_folder_path: 
+  monitor: all
+  quality_profile:
+  language_profile: German
+  series_type: standard
+  season_folder: true
+  tag:
+  search: false
+  cutoff_search: false
+  sonarr_path: 
+  plex_path: 
+  upgrade_existing: false
+  ignore_cache: false
+  monitor_existing: false
+
+trakt:
+  client_id: 
+  client_secret:
+  pin:
+  authorization:
+    # everything below is autofilled by the script
+    access_token: 
+    token_type: 
+    expires_in: 
+    refresh_token: 
+    scope: 
+    created_at: 
+
+mal:
+  client_id: 
+  client_secret: 
+  authorization:
+    # everything below is autofilled by the script
+    access_token:
+    token_type:
+    expires_in:
+    refresh_token:

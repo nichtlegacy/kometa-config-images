@@ -1,0 +1,61 @@
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: "01"
+
+collections:
+  Best of 1960s:
+    sort_title: !02 +31
+    summary: Best Movies of the 1960's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/1960.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/gary-lydement/lists/best-movies-of-the-60-s?sort=popularity,asc           
+
+  Best of 1970s:
+    sort_title: !02 +32
+    summary: Best Movies of the 1970's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/1970.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/dinkysniff/lists/decades-rotten-tomatoes-the-140-essential-1970s-movies?sort=rank,asc
+
+  Best of 1980s:
+    sort_title: !02 +33
+    summary: Best Movies of the 1980's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/1980.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/hdlists/lists/rottentomatoes-com-s-best-of-the-80s
+
+  Best of 1990s:
+    sort_title: !02 +34
+    summary: Best Movies of the 1990's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/1990.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/hdlists/lists/rottentomatoes-com-s-best-of-the-90s
+
+  Best of 2000s:
+    sort_title: !02 +35
+    summary: Best Movies of the 2000's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/2000.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/hdlists/lists/best-of-the-00s
+
+  Best of 2000s Comedy:
+    sort_title: !02 +36
+    summary: Best Comedy Movies of the 2000's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/2000.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/arad36/lists/2000s-comedys
+
+  Best of 2010s:
+    sort_title: !02 +37
+    summary: Best Movies of the 2010's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/2010.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/hdlists/lists/best-of-the-2010s
+
+  Best of 2020s:
+    sort_title: !02 +38
+    summary: Best Movies of the 2020's
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/refs/heads/master/year/best/2020.jpg
+    collection_order: custom
+    trakt_list: https://trakt.tv/users/siskourso/lists/best-of-2020s-movies?sort=rank,asc

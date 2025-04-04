@@ -1,0 +1,57 @@
+templates:
+  #####################################
+  #    Holiday Movie Collections      #
+  #####################################
+  Holiday:
+    smart_label: title.asc
+    summary: "A collection of <<holiday>> movies and other movies that may relate to the holiday."
+    sort_title: "!B"
+    run_again: false
+    visible_home: true
+    visible_shared: true
+    sync_mode: sync
+
+collections:
+  Halloween Movies:
+    sort_title: "!AB"
+    template: { name: Holiday, holiday: Halloween }
+    imdb_list:
+      - https://www.imdb.com/list/ls050722485/
+      - https://www.imdb.com/list/ls003790985/
+      - https://www.imdb.com/list/ls000091321/
+      - https://www.imdb.com/list/ls066094292/
+
+  Christmas Movies:
+    sort_title: "!AB"
+    template: { name: Holiday, holiday: Christmas }
+    imdb_list:
+      - https://www.imdb.com/list/ls000096828/
+      - https://www.imdb.com/list/ls097394442/
+      - https://www.imdb.com/list/ls068976997/
+      - https://www.imdb.com/list/ls027567380/
+      - https://www.imdb.com/list/ls000096828/
+      - https://www.imdb.com/list/ls063874720/
+      - https://www.imdb.com/list/ls566244283/
+      - https://www.imdb.com/list/ls025976544/
+
+  Valentine Movies:
+    sort_title: "!AB"
+    template: { name: Holiday, holiday: Valentine }
+    imdb_list:
+      - https://www.imdb.com/list/ls000094398/
+      - https://www.imdb.com/list/ls057783436/
+      - https://www.imdb.com/list/ls064427905/
+
+  Independence Movies:
+    sort_title: "!AB"
+    template: { name: Holiday, holiday: Independence }
+    imdb_list:
+      - https://www.imdb.com/list/ls068664510/
+      - https://www.imdb.com/list/ls080925875/
+
+  Easter Movies:
+    sort_title: "!AB"
+    template: { name: Holiday, holiday: Easter }
+    imdb_list:
+      - https://www.imdb.com/list/ls062665509/
+      - https://www.imdb.com/list/ls051733651/ 

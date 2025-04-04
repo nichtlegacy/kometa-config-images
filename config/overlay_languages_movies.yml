@@ -1,0 +1,44 @@
+queues:
+  language_queue:
+    - horizontal_offset: 100
+      horizontal_align: right
+      vertical_offset: 1430
+      vertical_align: top
+    - horizontal_offset: 235
+      horizontal_align: right
+      vertical_offset: 1430
+      vertical_align: top
+    - horizontal_offset: 370
+      horizontal_align: right
+      vertical_offset: 1000
+      vertical_align: top
+
+templates:
+  my_language_template:
+    default:
+      lang: de
+      l_queue: language_queue
+    optional:
+      level
+    overlay: 
+      name: <<lang>>   
+      file: config/overlays/flags2/<<lang>>.png
+      text: " "
+      back_width: 35
+      back_height: 115
+      back_color: "#FFFFFF00"
+      queue: <<l_queue>>
+      weight: <<weight>>
+    plex_search: 
+      all:
+        audio_language: <<lang>>
+    
+overlays:
+  de:
+    template: {name: my_language_template, lang: de, weight: 100}
+
+  en:
+    template: {name: my_language_template, lang: en, weight: 80}
+
+  jp:
+    template: {name: my_language_template, lang: ja, weight: 60}

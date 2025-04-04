@@ -1,0 +1,18 @@
+templates:
+  warning:
+    plex_all: true
+    filters:
+      filepath.regex: '(?i)\b<<simple_regex>>\b'
+    overlay:
+      name: <<overlay_name>>
+      file: /config/overlays/images/cam.png
+      group: warning
+      weight: <<weight>>
+    allowed_library_types: movie
+overlays:
+  CAM:
+    variables: {simple_regex: "(HQ|HD)?CAM", weight: 4}
+    template: [name: warning]
+  TELESYNC:
+    variables: {simple_regex: "(TS|HDTS|TELESYNC)", weight: 3}
+    template: [name: warning]
