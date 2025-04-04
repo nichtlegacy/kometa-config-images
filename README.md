@@ -20,7 +20,7 @@ This repo includes support for:
 
 - [🎭 **Actors**](#-actors) – Smart collections for top actors with matching posters  
 - [🎬 **Directors**](#-directors) – Curated filmographies from famous directors and writers  
-- [🕰️ **Decades**](#d-ecades) – Best movies grouped by decade  
+- [🕰️ **Decades**](#-decades) – Best movies grouped by decade  
 - [🎞️ **Resolution**](#-resolution) – Collections based on video quality (4K, 1080p, DV, Remux, etc.)  
 - [🏷️ **Editions & Formats**](#-editions--formats) – IMAX, Extended, Remux, CAM, TS, and more  
 - [🧠 **IMDb Charts**](#-imdb-charts) – Popular and Top 250 lists with custom filters  
@@ -32,8 +32,8 @@ This repo includes support for:
 - [📺 **TV Show Lists**](#-tv-show-lists) – Sitcoms, top episodes, nostalgia shows, video game adaptations  
 - [🔁 **Chronological TV Orders**](#-chronological-tv-orders) – Ordered episodes (e.g., Star Wars: The Clone Wars)  
 - [👤 **Person-Based Lists**](#-person-based-lists) – Lists from creators like BeHaind, BelYves  
-- [🖼️ **Overlays for Movies**](#-overlays-for-movies) – Resolutions, formats  
-- [🖼️ **Overlays for TV Shows**](#-overlays-for-tv-shows) – Streaming network overlays  
+- [🖼️ **Overlays for Movies**](#overlays-for-movies) – Resolutions, formats  
+- [🖼️ **Overlays for TV Shows**](#overlays-for-tv-shows) – Streaming network overlays  
 
 ---
 
