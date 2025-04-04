@@ -37,84 +37,84 @@ This repo includes support for:
 
 ---
 
-### 🎭 Actors
+### Actors
 
 ![Actors](screenshots/actors.png)  
 Smart collections for popular actors using TMDB IDs and custom ThePosterDB posters.
 
 ---
 
-### 🎬 Directors
+### Directors
 
 ![Directors](screenshots/directors.png)  
 Curated director collections with full filmographies and matching posters.
 
 ---
 
-### 🕰️ Decades
+### Decades
 
 ![Decades](screenshots/decades.png)  
 Collections of the best movies from each decade (60s–2020s).
 
 ---
 
-### 🎞️ Resolution
+### Resolution
 
 ![Resolution](screenshots/resolution.png)  
 Organize your media by quality: 4K, 1080p and other resolutions.
 
 ---
 
-### 🏷️ Editions & Formats
+### Editions & Formats
 
 ![Editions & Formats](screenshots/editions--formats.png)  
 Special editions like IMAX, Extended, Remux, 4K Dolby Vision
 
 ---
 
-### 🧠 IMDb Charts
+### IMDb Charts
 
 ![IMDb Charts](screenshots/imdb-charts.png)  
 Auto-generated collections from IMDb Popular and Top 250 lists.
 
 ---
 
-### 🎯 TMDb Charts
+### TMDb Charts
 
 ![TMDb Charts](screenshots/tmdb-charts.png)  
 Top rated and popular movies based on TMDb data.
 
 ---
 
-### 🏆 Oscars
+### Oscars
 
 ![Oscars](screenshots/oscars.png)  
 Collections for Best Picture, Director, and dynamic yearly winners.
 
 ---
 
-### 📋 Movie Lists
+### Movie Lists
 
 ![Movie Lists](screenshots/movie-lists.png)  
 Themed collections like Apocalyptic, Heist, Mindfuck, Stoner Movies, etc.
 
 ---
 
-### 🏢 Studios & Originals
+### Studios & Originals
 
 ![Studios & Originals](screenshots/studios--originals.png)  
 Group films by production studios or streaming platforms.
 
 ---
 
-### 🌌 Universes
+### Universes
 
 ![Universes](screenshots/universes.png)  
 Cinematic universes like MCU, Star Wars, X-Men, Wizarding World, and more.
 
 ---
 
-### 📺 TV Show Lists
+### TV Show Lists
 
 ![TV Show Lists](screenshots/tv-show-lists.png)  
 ![TV Show Lists](screenshots/tv-show-lists2.png)  
@@ -122,28 +122,28 @@ Favorite sitcoms, nostalgia shows, top episodes and adaptations from games/books
 
 ---
 
-### 🔁 Chronological TV Orders
+### Chronological TV Orders
 
 ![Chronological TV Orders](screenshots/chronological-tv-orders.jpg)  
 TV episode collections sorted in official chronological order (e.g., Clone Wars). Based on Trakt lists.
 
 ---
 
-### 👤 Person-Based Lists
+### Person-Based Lists
 
 ![Person-Based Lists](screenshots/person-based-lists.png)  
 IMDb lists from creators like BeHaind and BelYves.
 
 ---
 
-### 🖼️ Overlays for Movies
+### Overlays for Movies
 
 ![Overlays for Movies](screenshots/overlays-for-movies.png)  
 Visual overlays for resolution and video format.
 
 ---
 
-### 🖼️ Overlays for TV Shows
+### Overlays for TV Shows
 
 ![Overlays for TV Shows](screenshots/overlays-for-tv-shows.png)  
 Network overlays for series like Netflix, HBO, Prime, etc.
