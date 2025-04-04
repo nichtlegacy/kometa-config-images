@@ -7,7 +7,7 @@
 Custom images and YAML configurations for [Kometa](https://kometa.wiki), built to supercharge your Plex experience with smart collections, overlays, and metadata magic.
 
 The posters are generated using [Posterizarr](https://github.com/fscorrupt/Posterizarr) and then managed via [Kometa](https://kometa.wiki) to create collections and apply overlays automatically.  
-I'm using a mix of artwork from **Posterizarr**, [ThePosterDB](https://theposterdb.com), and [MediUX](https://mediux.pro).
+I'm using a mix of artwork from [Posterizarr](https://github.com/fscorrupt/Posterizarr), [ThePosterDB](https://theposterdb.com), and [MediUX](https://mediux.pro).
 
 All posters for the [**Universes**](#-universes) and [**Movie Lists**](#-movie-lists) were custom-designed by me using Photoshop and are located in the `/posters/` folder.  
 Posters for [**Actors**](#-actors), [**Directors**](#-directors), [**Decades**](#-decades), [**Studios**](#-studios--originals), and [**Originals**](#-studios--originals) are sourced from TMDb, IMDb, or ThePosterDB.
